@@ -104,3 +104,32 @@ body {
   width: 230px;
   height: 230px;
 }
+
+.clock .hour .hr,
+.clock .minute .min,
+.clock .second .sec{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.clock .hour .hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff3d68;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.clock .minute .min::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #39a2db;
+    z-index: 11;
+    border-radius: 8px;
+}
