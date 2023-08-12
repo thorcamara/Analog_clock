@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,18 +12,18 @@ body{
   background: #111;
 }
 
-.container{
+.container {
   position: relative;
 }
 
-.container .circle{
+.container .circle {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   animation: 2s ease-in infinite alternate;
 }
 
-.container .circle:nth-child(1){
+.container .circle:nth-child(1) {
   width: 180px;
   height: 180px;
   top: -60px;
@@ -32,8 +32,36 @@ body{
   animation-name: move-up;
 }
 
-@keyframes move-up{
-  to{
-      transform: translateY(-10px);
+@keyframes move-up {
+  to {
+    transform: translateY(-10px);
   }
+}
+
+.container .circle:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(#d64612, #e48307);
+  animation-name: move-down;
+}
+
+@keyframes move-down {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
